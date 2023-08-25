@@ -3,9 +3,8 @@ import classes from '../../styles/Meals.module.css';
 import MealItem from './MealItem';
 import { CartContext } from '../../context/Context';
 
-function Meals(prop) {
+function Meals() {
   const { mealItem } = useContext(CartContext);
-  console.log(prop.show);
   return (
     <>
       <section className={classes.summary}>
@@ -38,4 +37,4 @@ function Meals(prop) {
   );
 }
 
-export default React.memo(Meals);
+export default Meals;
