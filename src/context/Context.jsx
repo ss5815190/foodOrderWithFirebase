@@ -9,7 +9,7 @@ export function CartContextProvider({ children }) {
   const [totalQuantity, setTotalQuantity] = useState(0);
   const [cartIsShown, setCartIsShown] = useState(false);
   const [totalAmount, setTotalAmount] = useState(0);
-  const [mealItem, setMealItem] = useState({});
+  const [mealItem, setMealItem] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const api = async () => {
@@ -36,7 +36,7 @@ export function CartContextProvider({ children }) {
     };
     api();
   }, []);
-
+  
   const cartReducer = (state, action) => {
     switch (action.type) {
       case 'ADD_TO_CART':
