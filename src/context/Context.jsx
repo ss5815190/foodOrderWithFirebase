@@ -30,7 +30,6 @@ export function CartContextProvider({ children }) {
         }, []);
         setMealItem(updateData);
         setIsLoading(false);
-        console.log('一開始的資料', updateData);
       } catch (err) {
         console.log(err);
       }
