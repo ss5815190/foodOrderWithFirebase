@@ -3,9 +3,9 @@ import classes from '../../styles/Meals.module.css';
 import MealItem from './MealItem';
 import { CartContext } from '../../context/Context';
 
-function Meals() {
+function Meals(prop) {
   const { mealItem } = useContext(CartContext);
-
+  console.log(prop.show);
   return (
     <>
       <section className={classes.summary}>

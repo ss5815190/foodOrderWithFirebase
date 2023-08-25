@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       {cartIsShown && <Cart />}
       <Header />
-      {!isLoading && <Meals />}
+      {!isLoading && <Meals show={false} />}
     </div>
   );
 }
