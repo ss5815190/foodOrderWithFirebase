@@ -36,7 +36,7 @@ export function CartContextProvider({ children }) {
     };
     api();
   }, []);
-  
+
   const cartReducer = (state, action) => {
     switch (action.type) {
       case 'ADD_TO_CART':
